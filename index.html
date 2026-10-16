@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff1f5">
+  <meta name="description" content="A little birthday surprise made with love for Shinta.">
+  <title>For Shinta, My Sunshine ☀️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rose: #e78ca7; --deep-rose: #bb5579; --pink: #fff0f4;
+      --cream: #fffaf5; --ink: #603c4a; --muted: #906c7a;
+      --gold: #f2c777; --white: rgba(255,255,255,.78);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); font-family: "DM Sans", sans-serif;
+      background: linear-gradient(180deg, #fff6f8 0%, #fffaf5 48%, #fff0f4 100%);
+      overflow-x: hidden;
+    }
+    button { font: inherit; cursor: pointer; }
+    button:focus-visible, a:focus-visible { outline: 3px solid #bb5579; outline-offset: 4px; }
+    .ambient {
+      position: fixed; inset: 0; pointer-events: none; z-index: -1; overflow: hidden;
+      background: radial-gradient(circle at 10% 10%, rgba(255,198,216,.35), transparent 30%),
+                  radial-gradient(circle at 90% 35%, rgba(255,225,185,.32), transparent 28%),
+                  radial-gradient(circle at 50% 90%, rgba(242,199,216,.28), transparent 35%);
+    }
+    .sparkle { position: absolute; color: #e9a3b9; opacity: .48; animation: twinkle 3.5s ease-in-out infinite; }
+    @keyframes twinkle { 0%,100% { transform: scale(.8) rotate(0); opacity:.25 } 50% { transform: scale(1.2) rotate(15deg); opacity:.8 } }
+    .topbar { position: absolute; top: 0; left: 0; right: 0; display:flex; justify-content:space-between; align-items:center; padding: 20px clamp(18px,5vw,64px); }
+    .brand { font-family:"Playfair Display",serif; font-size:1.05rem; letter-spacing:.03em; }
+    .brand span { color: var(--deep-rose); }
+    .music-toggle { border:1px solid rgba(187,85,121,.25); background:rgba(255,255,255,.65); color:var(--deep-rose); border-radius:999px; padding:10px 14px; font-size:.88rem; backdrop-filter: blur(10px); }
+    .hero { min-height:100svh; display:grid; place-items:center; padding:100px 20px 60px; text-align:center; position:relative; }
+    .hero-inner { width:min(760px,100%); animation: rise 1s ease both; }
+.hero {
+    position: relative;
+    z-index: 1;
+}
+
+.music-toggle {
+    z-index: 9999;
+}
+    @keyframes rise { from { opacity:0; transform:translateY(18px) } to { opacity:1; transform:translateY(0) } }
+    .eyebrow { text-transform:uppercase; letter-spacing:.24em; color:var(--deep-rose); font-size:.72rem; font-weight:700; }
+    h1 { font-family:"Playfair Display",serif; font-weight:500; font-size:clamp(3rem,9vw,6.6rem); line-height:1.03; margin:18px 0; }
+    h1 .script { display:block; font-family:"Great Vibes",cursive; color:var(--deep-rose); font-size:1.08em; font-weight:400; }
+    .hero p { max-width:540px; margin:0 auto; color:var(--muted); font-size:clamp(1rem,2.4vw,1.15rem); line-height:1.8; }
+    .sun { width:92px; height:92px; margin:0 auto 22px; border-radius:50%; display:grid; place-items:center; font-size:2.4rem; background:linear-gradient(145deg,#fff8d8,#ffdce7); box-shadow:0 0 0 12px rgba(255,255,255,.35), 0 12px 50px rgba(221,133,164,.18); animation: float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-9px) } }
+    .primary, .secondary { border:0; border-radius:999px; padding:15px 24px; transition:transform .2s, box-shadow .2s; }
+    .primary { color:white; background:linear-gradient(120deg,#e78ca7,#c96b8c); box-shadow:0 10px 25px rgba(201,107,140,.25); }
+    .primary:hover { transform:translateY(-2px); box-shadow:0 14px 30px rgba(201,107,140,.32); }
+    .secondary { color:var(--deep-rose); background:white; border:1px solid #f2d2dd; }
+    .hero .primary { margin-top:30px; }
+    .hint { font-size:.78rem !important; margin-top:14px !important; opacity:.8; }
+    .section { width:min(1040px,calc(100% - 36px)); margin:0 auto; padding:84px 0; }
+    .section-heading { text-align:center; margin-bottom:36px; }
+    .section-heading h2 { font-family:"Playfair Display",serif; font-weight:500; font-size:clamp(2rem,5vw,3.3rem); margin:10px 0; }
+    .section-heading p { color:var(--muted); line-height:1.7; max-width:560px; margin:0 auto; }
+    .letter-card { max-width:760px; margin:0 auto; padding:clamp(24px,6vw,54px); border:1px solid rgba(231,140,167,.26); border-radius:28px; background:rgba(255,255,255,.72); box-shadow:0 20px 70px rgba(166,92,118,.08); position:relative; }
+    .letter-card:before { content:"✿"; position:absolute; top:16px; right:24px; font-size:2rem; color:#e9a3b9; opacity:.7; }
+    .letter-card p { color:#775260; line-height:1.95; font-size:1.02rem; }
+    .signature { font-family:"Great Vibes",cursive; font-size:2.6rem; color:var(--deep-rose); margin-top:20px; }
+    .memory-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .memory { background:#fff; padding:12px 12px 20px; border-radius:9px; box-shadow:0 14px 35px rgba(120,67,88,.1); transform:rotate(var(--tilt)); transition:transform .25s; }
+    .memory:hover { transform:rotate(0) translateY(-5px); }
+    .photo-placeholder { aspect-ratio:4/4.5; display:grid; place-items:center; text-align:center; padding:16px; border-radius:4px; background:linear-gradient(145deg,#ffe5ec,#fff3dc); color:#ad6b82; overflow:hidden; }
+    .photo-placeholder .emoji { display:block; font-size:2.3rem; margin-bottom:10px; }
+    .photo-placeholder small { display:block; line-height:1.5; }
+    .caption { font-family:"Great Vibes",cursive; font-size:1.8rem; text-align:center; margin-top:14px; color:#8b5268; }
+    .memory-note { text-align:center; font-size:.82rem; color:var(--muted); margin-top:20px; }
+    .reasons { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .reason { padding:24px 18px; text-align:center; border-radius:20px; background:rgba(255,255,255,.72); border:1px solid rgba(231,140,167,.2); }
+    .reason .emoji { font-size:1.8rem; }
+    .reason p { line-height:1.65; color:#805968; font-size:.94rem; margin-bottom:0; }
+    .surprise { text-align:center; padding:44px 22px; border-radius:30px; background:linear-gradient(140deg,rgba(255,229,237,.9),rgba(255,247,223,.88)); border:1px solid rgba(231,140,167,.22); }
+    .cake { font-size:5rem; display:inline-block; filter:drop-shadow(0 10px 12px rgba(187,85,121,.15)); animation: float 3s ease-in-out infinite; }
+    .surprise h2 { font-family:"Playfair Display",serif; font-size:clamp(1.9rem,5vw,3rem); font-weight:500; }
+    .surprise p { max-width:570px; margin:0 auto 22px; color:#805968; line-height:1.8; }
+    .hidden-message { display:none; max-width:600px; margin:25px auto 0; padding:24px; background:rgba(255,255,255,.8); border-radius:20px; animation:rise .5s ease both; }
+    .hidden-message.show { display:block; }
+    .hidden-message p { margin:0; }
+    .footer { text-align:center; padding:35px 20px 50px; color:var(--muted); font-size:.85rem; }
+    .footer .heart { color:var(--deep-rose); }
+    .confetti { position:fixed; top:-20px; z-index:20; pointer-events:none; animation:fall linear forwards; }
+    @keyframes fall { to { transform:translateY(110vh) rotate(720deg); opacity:.1; } }
+    .toast { position:fixed; left:50%; bottom:24px; transform:translate(-50%,20px); opacity:0; background:#704555; color:white; padding:12px 18px; border-radius:999px; font-size:.88rem; transition:.3s; z-index:30; pointer-events:none; }
+    .toast.show { opacity:1; transform:translate(-50%,0); }
+    @media (max-width:700px) { .memory-grid { grid-template-columns:1fr; max-width:330px; margin:auto; gap:22px; } .memory { transform:rotate(0); } .reasons { grid-template-columns:1fr; } .section { padding:60px 0; } .topbar { padding:16px; } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }
+
+    .chat-panel { max-width:1000px; margin:0 auto; }
+    .chat-upload { text-align:center; padding:clamp(24px,5vw,42px); border:1.5px dashed #e6a9bc; border-radius:26px; background:rgba(255,255,255,.72); }
+    .upload-icon { width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:#fff0f5;margin:0 auto 14px;font-size:1.8rem; }
+    .chat-upload h3,.chat-result-heading h3 { font-family:"Playfair Display",serif;font-size:1.65rem;font-weight:500;margin:8px 0; }
+    .chat-upload>p { max-width:630px;margin:0 auto 18px;line-height:1.7;color:var(--muted); }
+    .file-label { display:inline-block;padding:13px 20px;border-radius:999px;background:linear-gradient(120deg,#e78ca7,#c96b8c);color:white;font-weight:600;cursor:pointer;box-shadow:0 8px 20px rgba(201,107,140,.2); }
+    #chatFile { position:absolute;width:1px;height:1px;opacity:0;overflow:hidden; }
+    #chatFile:focus-visible + .privacy-note { outline:2px solid var(--deep-rose); }
+    .privacy-note { font-size:.83rem!important;margin-top:16px!important; }
+    .export-help { max-width:600px;margin:18px auto 0;text-align:left;color:var(--muted);background:#fff8fa;padding:14px 18px;border-radius:14px; }
+    .export-help summary { cursor:pointer;font-weight:600;color:var(--deep-rose); }
+    .export-help ol { line-height:1.8;padding-left:22px; }
+    .chat-error { margin:18px 0;padding:14px 18px;border-radius:14px;background:#fff0f0;color:#9a334d; }
+    .chat-result-heading { display:flex;align-items:center;justify-content:space-between;gap:18px;margin:34px 0 18px; }
+    .chat-result-heading h3 { font-size:2rem; }
+    .chat-subtitle,.card-caption { color:var(--muted);font-size:.88rem;margin:4px 0 0; }
+    .clear-chat { white-space:nowrap;padding:10px 16px; }
+    .chat-kpis { display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px; }
+    .chat-kpi { padding:20px 16px;background:rgba(255,255,255,.82);border:1px solid rgba(231,140,167,.2);border-radius:18px; }
+    .chat-kpi span { display:block;color:var(--muted);font-size:.83rem;margin-bottom:8px; }
+    .chat-kpi strong { font-family:"Playfair Display",serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:500;overflow-wrap:anywhere; }
+    .chat-result-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px; }
+    .chat-card { min-width:0;padding:22px;border:1px solid rgba(231,140,167,.2);border-radius:20px;background:rgba(255,255,255,.8); }
+    .chat-card h4 { font-family:"Playfair Display",serif;font-size:1.3rem;font-weight:500;margin:0; }
+    .bar-list { display:grid;gap:13px;margin-top:22px; }
+    .bar-row { display:grid;grid-template-columns:minmax(65px,120px) minmax(30px,1fr) auto;gap:10px;align-items:center;font-size:.84rem; }
+    .bar-name { overflow-wrap:anywhere; }
+    .bar-track { height:10px;background:#f9e4eb;border-radius:99px;overflow:hidden; }
+    .bar-fill { height:100%;background:linear-gradient(90deg,#e78ca7,#c96b8c);border-radius:99px;min-width:2px; }
+    .bar-count { color:var(--muted);font-variant-numeric:tabular-nums; }
+    .hour-bars { display:grid;grid-template-columns:repeat(24,minmax(0,1fr));align-items:end;gap:3px;height:145px;margin-top:24px;padding-top:8px;border-bottom:1px solid #f0d4de; }
+    .hour-bar { background:linear-gradient(180deg,#e78ca7,#d77b9a);border-radius:4px 4px 0 0;min-height:3px;position:relative; }
+    .hour-bar:hover::after { content:attr(data-tip);position:absolute;bottom:calc(100% + 5px);left:50%;transform:translateX(-50%);background:#704555;color:white;font-size:10px;padding:4px 6px;border-radius:5px;white-space:nowrap;z-index:2; }
+    .hour-labels { display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);margin-top:8px; }
+    .chat-disclaimer { color:var(--muted);font-size:.8rem;line-height:1.6;text-align:center;margin:20px auto 0;max-width:750px; }
+
+    .chat-card.monthly-trend { grid-column:1 / -1; }
+    .trend-chart { width:100%; height:auto; display:block; margin-top:16px; overflow:visible; }
+    .trend-chart .gridline { stroke:#f1dce3; stroke-width:1; }
+    .trend-chart .trend-line { fill:none; stroke:#cf7192; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+    .trend-chart .trend-dot { fill:#fff; stroke:#cf7192; stroke-width:2; }
+    .trend-chart text { fill:#906c7a; font-family:"DM Sans",sans-serif; font-size:12px; }
+    .chart-legend { display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:.75rem;margin-top:8px; }
+    .date-rank { display:grid;gap:14px;margin-top:20px; }
+    .date-rank .bar-row { grid-template-columns:minmax(100px,140px) minmax(30px,1fr) auto; }
+    .date-rank .bar-name { font-size:.8rem; }
+    .chat-kpi small { display:block;color:var(--muted);font-size:.76rem;margin-top:6px;line-height:1.4; }
+
+    @media(max-width:700px) { .chat-kpis{grid-template-columns:repeat(2,1fr)}.chat-result-grid{grid-template-columns:1fr}.chat-result-heading{align-items:flex-start;flex-direction:column}.clear-chat{align-self:flex-start}.chat-card{padding:18px}.bar-row{grid-template-columns:minmax(60px,100px) minmax(20px,1fr) auto;gap:7px} }
+
+  </style>
+</head>
+<body>
+  <div class="ambient" id="ambient" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="brand">Semoga panjang umur <span>♡</span></div>
+    <button class="music-toggle" id="musicToggle" aria-pressed="false" title="Play or pause background music">♫ Play music</button>
+<audio id="backgroundMusic" loop preload="none">
+  <source src="music.mp3" type="audio/mpeg">
+  Browser kamu tidak mendukung pemutaran audio.
+</audio>
+
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="sun" aria-hidden="true">☀️</div>
+        <div class="eyebrow">Today is all about you</div>
+        <h1>Happy 23 Birthday,<span class="script">Sayang</span></h1>
+        <p>To my Sunshine — you make ordinary days feel warmer, brighter, and a little more magical. This tiny corner of the internet is just for you. 💗</p>
+        <button class="primary" id="openLetter">Open your little surprise <span aria-hidden="true">♡</span></button>
+        <p class="hint">Best opened with a little time, and maybe a smile.</p>
+      </div>
+    </section>
+
+    <section class="section" id="letter">
+      <div class="section-heading">
+        <div class="eyebrow">A note from my heart</div>
+        <h2>For My Sunshine</h2>
+        <p>Maaf Ya Tahun Ini Ga Bisa Seheboh Tahun Lalu.</p>
+      </div>
+      <article class="letter-card">
+        <p>My Sunshine,</p>
+        <p>Selamat Ulang Tahun Sayang. ☀️</p>
+        <p>Hari ini, dunia merayakan hari ketika seseorang yang begitu istimewa lahir ke dalamnya. Dan aku bersyukur, dari sekian banyak orang yang ada di dunia ini, semesta memberiku kesempatan untuk mengenalmu, menyayangimu, dan menjadikanmu bagian dari hidupku.</p>
+        <p>Tapi sebelumnya aku mau minta maaf, Aku ga bisa hadir disana ngerayain seperti tahun kemarin, Padahal ini hari yang paling kamu tunggu setiap tahunnya, Tapi aku mau kamu tau kalau apa aku rasa masih sama dengan saat pertama kita pacaran.</p>
+        <p>Seandainya kamu bisa liat diri kamu dari sudut pandang aku, mungkin kamu bakal tau seberapa cintanya aku sama kamu,  Bagiku, kamu bukan cuma orang yang hadir dalam hidup aku, tetapi juga seseorang yang ngasih aku alasan baru untuk bahagia. </p>
+        <p>Di hari ulang tahunmu ini, jika aku boleh minta sesuatu, aku mau kamu selalu ingat bagiku kamu satu satu nya orang yang layak dicintai dengan tulus, dihargai tanpa harus meminta, dan diperlakukan dengan lembut (walaupun kadang aku suka marah-marah sendiri kalo lagi sensi), bahkan pada hari-hari ketika kamu merasa tidak cukup baik. Kamu tidak harus selalu kuat, tidak harus selalu tersenyum, dan tidak harus menjadi sempurna. Aku ingin kamu tahu bahwa menjadi dirimu sendiri saja sudah lebih dari cukup untuk membuatmu begitu berarti.</p>
+        <p>Aku bingung mau bikin kalimat T.T, jadi terasa lebay, Tapi sekarang serius ya, Harapan aku buat kamu nih, Semoga.... kamu kurang kurangin makan fast food, yang pedes-pedes, yang berminyak, Seblak, Buger, Pizza, Kebab, Seblak lagi, Mie ayam, Baso, Mie instant, Seblak lagi.</p>
+        <p>Happy birthday, my Sunshine. Semoga cerita kamu terus berlanjut ke tahun-tahun berikutnya biar kamu bisa baca tulisan lebay aku lagi di tahun depan.</p>
+        <div class="signature">I Love You Pokoknya ♡</div>
+      </article>
+    </section>
+
+    <section class="section" id="memories">
+      <div class="section-heading">
+        <div class="eyebrow">Happy Birthday Sayang</div>
+        <h2>Gallery Pap si Cantik</h2>
+      </div>
+      <div class="memory-grid">
+        <article class="memory" style="--tilt:-2deg">
+          <img
+  src="images/our-favorite.jpg"
+  alt="A favorite photo of us together"
+  style="display:block;width:100%;aspect-ratio:4/4.5;object-fit:cover;border-radius:4px"
+>
+          <div class="caption">Kalo Kamu Nakal</div>
+        </article>
+        <article class="memory" style="--tilt:1.5deg">
+<img
+  src="images/images2.jpg"
+  alt="A favorite photo of us together"
+  style="display:block;width:100%;aspect-ratio:4/4.5;object-fit:cover;border-radius:4px"
+>
+          <div class="caption">Yang Ulang Tahun</div>
+        </article>
+        <article class="memory" style="--tilt:-1deg">
+<img
+  src="images/images1.jpg"
+  alt="A favorite photo of us together"
+  style="display:block;width:100%;aspect-ratio:4/4.5;object-fit:cover;border-radius:4px"
+>
+          <div class="caption">Yang Bikin Candu</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="memories">
+      <div class="section-heading">
+        <h2>Gallery Pap si Komuk</h2>
+      </div>
+      <div class="memory-grid">
+        <article class="memory" style="--tilt:-2deg">
+          <img
+  src="images/images4.jpg"
+  alt="A favorite photo of us together"
+  style="display:block;width:100%;aspect-ratio:4/4.5;object-fit:cover;border-radius:4px"
+>
+          <div class="caption">Lucid Dream</div>
+        </article>
+        <article class="memory" style="--tilt:1.5deg">
+<img
+  src="images/images5.jpg"
+  alt="A favorite photo of us together"
+  style="display:block;width:100%;aspect-ratio:4/4.5;object-fit:cover;border-radius:4px"
+>
+          <div class="caption">Keringetan</div>
+        </article>
+        <article class="memory" style="--tilt:-1deg">
+<img
+  src="images/images6.jpg"
+  alt="A favorite photo of us together"
+  style="display:block;width:100%;aspect-ratio:4/4.5;object-fit:cover;border-radius:4px"
+>
+          <div class="caption">Jumpscare</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="reasons">
+      <div class="section-heading">
+        <div class="eyebrow">A fewreminders</div>
+        <h2>Alasan Kenapa Kamu Itu Perfect</h2>
+        <p>Not a complete list — just a few things I hope you remember, today and every day.</p>
+      </div>
+      <div class="reasons">
+        <article class="reason"><div class="emoji">🌞</div><strong>Your warmth</strong><p>Kamu selalu punya cara kamu sendiri buat bikin hari hari aku jadi lebih indah.</p></article>
+        <article class="reason"><div class="emoji">💗</div><strong>Your heart</strong><p>Kamu selalu peduli sama aku mau sebesar atau sekecil apapun.</p></article>
+        <article class="reason"><div class="emoji">🌸</div><strong>Your Pap's</strong><p>Bangun tidur dapet pap, lagi capek buka HP dapet pap, pap, pap, pap, yipieee.</p></article>
+      </div>
+    </section>
+
+
+
+    <section class="section" id="surprise">
+      <div class="surprise">
+        <div class="eyebrow">One last thing…</div>
+        <div class="cake" aria-hidden="true">🎂</div>
+        <h2>Make a birthday wish, Sunshine</h2>
+        <p>Pejamkan mata kamu, Make a Wish!. kalo kamu sudah siap, bukalah kejutan terakhirmu..</p>
+        <button class="primary" id="wishButton">I made a wish ✨</button>
+        <div class="hidden-message" id="hiddenMessage" aria-live="polite">
+          <p><strong>My wish for you, Shinta:</strong></p>
+          <p>Semoga kamu jadi lebih sehat, kerjaan kamu jadi lebih gampang, dan semoga tahun depan kita bisa ketemu di stasiun jatinegara</p>
+          <p style="margin-top:16px">Happy birthday, love. The world is sweeter with you in it.</p>
+          <div class="signature">♡ Semoga Tahun Depan 24 :) ♡</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <section class="section" id="chat-insights">
+      <div class="section-heading">
+        <div class="eyebrow">Time Capsule chat-an kita di WA</div>
+        <h2>Our Long Distance Story 💬</h2>
+        <p>2 Tahun Bareng Dari gw elu ke aku kamu, moment lucu, marah-marah, senang sedih. Semuanya bikin kita bisa seperti sekarang.</p>
+      </div>
+      <div class="chat-panel">
+        <div class="chat-result-heading">
+          <div><div class="eyebrow">Chat-an Whatsapp Kita</div><h3>J &amp; Sunshine</h3><p class="chat-subtitle">October 7, 2024 – October 16, 2026 · Based on the exported WhatsApp chat</p></div>
+        </div>
+        <div class="chat-kpis">
+          <article class="chat-kpi"><span>Total Messages</span><strong>211,207</strong><small>Banyak banget untuk 2 tahun</small></article>
+          <article class="chat-kpi"><span>Words in readable text</span><strong>776,343</strong><small>Kebanyakan pasti copas Jokian</small></article>
+          <article class="chat-kpi"><span>Days we talked</span><strong>738 / 740</strong><small>Loh 2 hari kita ada ga chat-an?</small></article>
+          <article class="chat-kpi"><span>Average messages per day</span><strong>285</strong><small>Banyakkkk</small></article>
+          <article class="chat-kpi"><span>Our busiest hour</span><strong>6 PM</strong><small>Jam-jam nya mabar sama nobar</small></article>
+          <article class="chat-kpi"><span>Longest daily streak</span><strong>392 days</strong><small>Yahh ada 1 ato 2 hari kita ga chatan</small></article>
+          <article class="chat-kpi"><span>Our busiest date</span><strong>Jan 27</strong><small>Tanggal ini kita ngapain ya?</small></article>
+          <article class="chat-kpi"><span>Most active weekday</span><strong>Monday</strong><small>Hari senin, dengerin kamu ngeluh</small></article>
+        </div>
+        <div class="chat-result-grid">
+          <article class="chat-card monthly-trend">
+            <h4>Our conversation through the months</h4><p class="card-caption">Monthly message totals · Akhir-akhir ini agak kosong karna pada sibuk :(</p>
+            <svg class="trend-chart" viewBox="0 0 900 250" role="img" aria-label="Line chart of monthly message counts from October 2024 through October 2026"><line class="gridline" x1="48" y1="205.0" x2="850" y2="205.0" /><text x="40" y="209.0" text-anchor="end">0k</text><line class="gridline" x1="48" y1="153.6" x2="850" y2="153.6" /><text x="40" y="157.6" text-anchor="end">5k</text><line class="gridline" x1="48" y1="102.2" x2="850" y2="102.2" /><text x="40" y="106.2" text-anchor="end">10k</text><line class="gridline" x1="48" y1="50.8" x2="850" y2="50.8" /><text x="40" y="54.8" text-anchor="end">15k</text><polyline class="trend-line" points="48.0,107.2 81.4,63.1 114.8,60.7 148.2,34.1 181.7,54.8 215.1,67.9 248.5,101.1 281.9,108.8 315.3,129.9 348.8,127.8 382.2,161.2 415.6,135.0 449.0,87.4 482.4,160.5 515.8,161.4 549.2,140.8 582.7,161.2 616.1,142.2 649.5,118.6 682.9,116.4 716.3,120.2 749.8,139.8 783.2,142.9 816.6,138.9 850.0,172.5" /><circle class="trend-dot" cx="48.0" cy="107.2" r="3.5"><title>Oct 24: 9,519 messages</title></circle><text x="48.0" y="229" text-anchor="middle">Oct 24</text><circle class="trend-dot" cx="81.4" cy="63.1" r="3.5"><title>Nov 24: 13,808 messages</title></circle><circle class="trend-dot" cx="114.8" cy="60.7" r="3.5"><title>Dec 24: 14,036 messages</title></circle><circle class="trend-dot" cx="148.2" cy="34.1" r="3.5"><title>Jan 25: 16,626 messages</title></circle><text x="148.2" y="229" text-anchor="middle">Jan 25</text><circle class="trend-dot" cx="181.7" cy="54.8" r="3.5"><title>Feb 25: 14,617 messages</title></circle><circle class="trend-dot" cx="215.1" cy="67.9" r="3.5"><title>Mar 25: 13,343 messages</title></circle><circle class="trend-dot" cx="248.5" cy="101.1" r="3.5"><title>Apr 25: 10,112 messages</title></circle><text x="248.5" y="229" text-anchor="middle">Apr 25</text><circle class="trend-dot" cx="281.9" cy="108.8" r="3.5"><title>May 25: 9,356 messages</title></circle><circle class="trend-dot" cx="315.3" cy="129.9" r="3.5"><title>Jun 25: 7,306 messages</title></circle><circle class="trend-dot" cx="348.8" cy="127.8" r="3.5"><title>Jul 25: 7,511 messages</title></circle><text x="348.8" y="229" text-anchor="middle">Jul 25</text><circle class="trend-dot" cx="382.2" cy="161.2" r="3.5"><title>Aug 25: 4,260 messages</title></circle><circle class="trend-dot" cx="415.6" cy="135.0" r="3.5"><title>Sep 25: 6,809 messages</title></circle><circle class="trend-dot" cx="449.0" cy="87.4" r="3.5"><title>Oct 25: 11,445 messages</title></circle><text x="449.0" y="229" text-anchor="middle">Oct 25</text><circle class="trend-dot" cx="482.4" cy="160.5" r="3.5"><title>Nov 25: 4,332 messages</title></circle><circle class="trend-dot" cx="515.8" cy="161.4" r="3.5"><title>Dec 25: 4,246 messages</title></circle><circle class="trend-dot" cx="549.2" cy="140.8" r="3.5"><title>Jan 26: 6,249 messages</title></circle><text x="549.2" y="229" text-anchor="middle">Jan 26</text><circle class="trend-dot" cx="582.7" cy="161.2" r="3.5"><title>Feb 26: 4,258 messages</title></circle><circle class="trend-dot" cx="616.1" cy="142.2" r="3.5"><title>Mar 26: 6,115 messages</title></circle><circle class="trend-dot" cx="649.5" cy="118.6" r="3.5"><title>Apr 26: 8,406 messages</title></circle><text x="649.5" y="229" text-anchor="middle">Apr 26</text><circle class="trend-dot" cx="682.9" cy="116.4" r="3.5"><title>May 26: 8,619 messages</title></circle><circle class="trend-dot" cx="716.3" cy="120.2" r="3.5"><title>Jun 26: 8,251 messages</title></circle><circle class="trend-dot" cx="749.8" cy="139.8" r="3.5"><title>Jul 26: 6,342 messages</title></circle><text x="749.8" y="229" text-anchor="middle">Jul 26</text><circle class="trend-dot" cx="783.2" cy="142.9" r="3.5"><title>Aug 26: 6,040 messages</title></circle><circle class="trend-dot" cx="816.6" cy="138.9" r="3.5"><title>Sep 26: 6,436 messages</title></circle><circle class="trend-dot" cx="850.0" cy="172.5" r="3.5"><title>Oct 26: 3,165 messages</title></circle><text x="850.0" y="229" text-anchor="middle">Oct 26</text></svg>
+            <div class="chart-legend"><span>Oct 2024</span><span>Peak month: <strong>January 2025 · 16,626 messages</strong></span><span>Oct 2026*</span></div>
+            <p class="card-caption" style="margin-top:12px">*October 2024 and October 2026 are partial months in this export.</p>
+          </article>
+          <article class="chat-card">
+            <h4>Who sends more messages?</h4><p class="card-caption">Message count · Banyakan kamu masa</p>
+            <div class="bar-list"><div class="bar-row"><span class="bar-name">Sunshine 🍯♥️</span><div class="bar-track"><div class="bar-fill" style="width:56.72%"></div></div><span class="bar-count">119,799</span></div>
+<div class="bar-row"><span class="bar-name">J</span><div class="bar-track"><div class="bar-fill" style="width:43.28%"></div></div><span class="bar-count">91,408</span></div></div>
+          </article>
+          <article class="chat-card">
+            <h4>Words that show up a lot</h4><p class="card-caption">Common filler words filtered; affectionate “ayang” spellings grouped together, AYANGGGG</p>
+            <div class="bar-list"><div class="bar-row"><span class="bar-name">ayang*</span><div class="bar-track"><div class="bar-fill" style="width:100.00%"></div></div><span class="bar-count">19,430</span></div>
+<div class="bar-row"><span class="bar-name">mau</span><div class="bar-track"><div class="bar-fill" style="width:55.93%"></div></div><span class="bar-count">10,867</span></div>
+<div class="bar-row"><span class="bar-name">udh</span><div class="bar-track"><div class="bar-fill" style="width:30.46%"></div></div><span class="bar-count">5,919</span></div>
+<div class="bar-row"><span class="bar-name">lama</span><div class="bar-track"><div class="bar-fill" style="width:29.58%"></div></div><span class="bar-count">5,747</span></div>
+<div class="bar-row"><span class="bar-name">mam</span><div class="bar-track"><div class="bar-fill" style="width:20.44%"></div></div><span class="bar-count">3,971</span></div>
+<div class="bar-row"><span class="bar-name">bntr</span><div class="bar-track"><div class="bar-fill" style="width:17.63%"></div></div><span class="bar-count">3,426</span></div></div>
+          </article>
+          <article class="chat-card">
+            <h4>When do we talk the most?</h4><p class="card-caption">Messages sent in each hour of the day · Pagi dry, malem Mabar nobar</p>
+            <div class="hour-bars"><div class="hour-bar" style="height:21.25%" data-tip="00:00 · 3,874 messages" aria-label="00:00, 3,874 messages"></div>
+<div class="hour-bar" style="height:13.32%" data-tip="01:00 · 2,428 messages" aria-label="01:00, 2,428 messages"></div>
+<div class="hour-bar" style="height:8.15%" data-tip="02:00 · 1,485 messages" aria-label="02:00, 1,485 messages"></div>
+<div class="hour-bar" style="height:10.31%" data-tip="03:00 · 1,879 messages" aria-label="03:00, 1,879 messages"></div>
+<div class="hour-bar" style="height:7.48%" data-tip="04:00 · 1,363 messages" aria-label="04:00, 1,363 messages"></div>
+<div class="hour-bar" style="height:15.17%" data-tip="05:00 · 2,765 messages" aria-label="05:00, 2,765 messages"></div>
+<div class="hour-bar" style="height:22.45%" data-tip="06:00 · 4,093 messages" aria-label="06:00, 4,093 messages"></div>
+<div class="hour-bar" style="height:29.94%" data-tip="07:00 · 5,457 messages" aria-label="07:00, 5,457 messages"></div>
+<div class="hour-bar" style="height:41.91%" data-tip="08:00 · 7,639 messages" aria-label="08:00, 7,639 messages"></div>
+<div class="hour-bar" style="height:57.86%" data-tip="09:00 · 10,546 messages" aria-label="09:00, 10,546 messages"></div>
+<div class="hour-bar" style="height:71.27%" data-tip="10:00 · 12,992 messages" aria-label="10:00, 12,992 messages"></div>
+<div class="hour-bar" style="height:72.96%" data-tip="11:00 · 13,300 messages" aria-label="11:00, 13,300 messages"></div>
+<div class="hour-bar" style="height:64.92%" data-tip="12:00 · 11,833 messages" aria-label="12:00, 11,833 messages"></div>
+<div class="hour-bar" style="height:71.40%" data-tip="13:00 · 13,015 messages" aria-label="13:00, 13,015 messages"></div>
+<div class="hour-bar" style="height:63.34%" data-tip="14:00 · 11,545 messages" aria-label="14:00, 11,545 messages"></div>
+<div class="hour-bar" style="height:60.92%" data-tip="15:00 · 11,105 messages" aria-label="15:00, 11,105 messages"></div>
+<div class="hour-bar" style="height:63.52%" data-tip="16:00 · 11,578 messages" aria-label="16:00, 11,578 messages"></div>
+<div class="hour-bar" style="height:75.15%" data-tip="17:00 · 13,699 messages" aria-label="17:00, 13,699 messages"></div>
+<div class="hour-bar" style="height:100.00%" data-tip="18:00 · 18,228 messages" aria-label="18:00, 18,228 messages"></div>
+<div class="hour-bar" style="height:91.55%" data-tip="19:00 · 16,688 messages" aria-label="19:00, 16,688 messages"></div>
+<div class="hour-bar" style="height:69.77%" data-tip="20:00 · 12,718 messages" aria-label="20:00, 12,718 messages"></div>
+<div class="hour-bar" style="height:55.15%" data-tip="21:00 · 10,052 messages" aria-label="21:00, 10,052 messages"></div>
+<div class="hour-bar" style="height:39.72%" data-tip="22:00 · 7,240 messages" aria-label="22:00, 7,240 messages"></div>
+<div class="hour-bar" style="height:31.19%" data-tip="23:00 · 5,685 messages" aria-label="23:00, 5,685 messages"></div></div>
+            <div class="hour-labels"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>11 PM</span></div>
+            <p class="card-caption" style="margin-top:12px">Peak hour: <strong>6–7 PM</strong> · 18,228 messages</p>
+          </article>
+          <article class="chat-card">
+            <h4>Our busiest weekdays</h4><p class="card-caption">Message count by day of the week</p>
+            <div class="bar-list"><div class="bar-row"><span class="bar-name">Monday</span><div class="bar-track"><div class="bar-fill" style="width:100.00%"></div></div><span class="bar-count">36,605</span></div>
+<div class="bar-row"><span class="bar-name">Tuesday</span><div class="bar-track"><div class="bar-fill" style="width:90.47%"></div></div><span class="bar-count">33,118</span></div>
+<div class="bar-row"><span class="bar-name">Friday</span><div class="bar-track"><div class="bar-fill" style="width:83.13%"></div></div><span class="bar-count">30,430</span></div>
+<div class="bar-row"><span class="bar-name">Wednesday</span><div class="bar-track"><div class="bar-fill" style="width:80.86%"></div></div><span class="bar-count">29,597</span></div>
+<div class="bar-row"><span class="bar-name">Saturday</span><div class="bar-track"><div class="bar-fill" style="width:78.81%"></div></div><span class="bar-count">28,849</span></div>
+<div class="bar-row"><span class="bar-name">Thursday</span><div class="bar-track"><div class="bar-fill" style="width:78.03%"></div></div><span class="bar-count">28,563</span></div>
+<div class="bar-row"><span class="bar-name">Sunday</span><div class="bar-track"><div class="bar-fill" style="width:65.69%"></div></div><span class="bar-count">24,045</span></div></div>
+            <p class="card-caption" style="margin-top:12px">Most active day: <strong>Monday</strong></p>
+          </article>
+<article class="chat-card">
+            <h4>Days we really had a lot to say</h4><p class="card-caption">Hayoo Tanggal 27 januari ada apa yaa</p>
+            <div class="date-rank"><div class="bar-row"><span class="bar-name">Jan 27, 2025</span><div class="bar-track"><div class="bar-fill" style="width:100.00%"></div></div><span class="bar-count">2,124</span></div><div class="bar-row"><span class="bar-name">Feb 24, 2025</span><div class="bar-track"><div class="bar-fill" style="width:98.87%"></div></div><span class="bar-count">2,100</span></div><div class="bar-row"><span class="bar-name">Jan 25, 2025</span><div class="bar-track"><div class="bar-fill" style="width:68.79%"></div></div><span class="bar-count">1,461</span></div><div class="bar-row"><span class="bar-name">Feb 25, 2025</span><div class="bar-track"><div class="bar-fill" style="width:59.18%"></div></div><span class="bar-count">1,257</span></div><div class="bar-row"><span class="bar-name">Mar 20, 2025</span><div class="bar-track"><div class="bar-fill" style="width:56.97%"></div></div><span class="bar-count">1,210</span></div></div>
+            <p class="card-caption" style="margin-top:14px">January 27, 2025 takes the crown with <strong>2,124 messages</strong> in one day. 💌</p>
+          </article>
+                    <article class="chat-card">
+            <h4>Emoji moodboard</h4><p class="card-caption">Most-used emoji symbols (variation selectors combined) · pasti karna "💗💗 sayangg"</p>
+            <div class="bar-list"><div class="bar-row"><span class="bar-name">❤️</span><div class="bar-track"><div class="bar-fill" style="width:100.00%"></div></div><span class="bar-count">1,142</span></div>
+<div class="bar-row"><span class="bar-name">🤣</span><div class="bar-track"><div class="bar-fill" style="width:58.49%"></div></div><span class="bar-count">668</span></div>
+<div class="bar-row"><span class="bar-name">😭</span><div class="bar-track"><div class="bar-fill" style="width:55.34%"></div></div><span class="bar-count">632</span></div>
+<div class="bar-row"><span class="bar-name">🙃</span><div class="bar-track"><div class="bar-fill" style="width:48.95%"></div></div><span class="bar-count">559</span></div>
+<div class="bar-row"><span class="bar-name">💗</span><div class="bar-track"><div class="bar-fill" style="width:39.14%"></div></div><span class="bar-count">447</span></div>
+<div class="bar-row"><span class="bar-name">🥺</span><div class="bar-track"><div class="bar-fill" style="width:23.03%"></div></div><span class="bar-count">263</span></div></div>
+          </article>
+        </div>
+        <p class="chat-disclaimer">211,207 messages counted between the two participants.</p>
+      </div>
+    </section>
+
+  <footer class="footer">
+    Made with <span class="heart">♥</span>, just for Shinta.<br>
+    <span style="display:inline-block;margin-top:8px">A little reminder that you are loved.</span>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Tiny animated sparkles in the background.
+    const ambient = document.getElementById('ambient');
+    for (let i = 0; i < 22; i++) {
+      const s = document.createElement('span');
+      s.className = 'sparkle';
+      s.textContent = ['✦', '♡', '✧', '·'][i % 4];
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.fontSize = (10 + Math.random() * 18) + 'px';
+      s.style.animationDelay = (Math.random() * 4) + 's';
+      ambient.appendChild(s);
+    }
+
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+    }
+
+    document.getElementById('openLetter').addEventListener('click', () => {
+      document.getElementById('letter').scrollIntoView({ behavior: 'smooth' });
+      confettiBurst(32);
+    });
+
+    function confettiBurst(amount = 70) {
+      const pieces = ['💗', '💕', '✨', '🌸', '♥'];
+      for (let i = 0; i < amount; i++) {
+        const el = document.createElement('span');
+        el.className = 'confetti';
+        el.textContent = pieces[Math.floor(Math.random() * pieces.length)];
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.fontSize = (12 + Math.random() * 16) + 'px';
+        el.style.animationDuration = (2.5 + Math.random() * 3) + 's';
+        el.style.animationDelay = (Math.random() * .8) + 's';
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 6500);
+      }
+    }
+
+    document.getElementById('wishButton').addEventListener('click', () => {
+      const message = document.getElementById('hiddenMessage');
+      const isNew = !message.classList.contains('show');
+      message.classList.toggle('show');
+      document.getElementById('wishButton').textContent = isNew ? 'A wish, just for you ♡' : 'Open your final surprise ✨';
+      if (isNew) {
+        confettiBurst(100);
+        message.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+    
+const musicToggle = document.getElementById('musicToggle');
+const backgroundMusic = document.getElementById('backgroundMusic');
+
+musicToggle.addEventListener('click', async () => {
+  try {
+    if (backgroundMusic.paused) {
+      await backgroundMusic.play();
+
+      musicToggle.textContent = '♫ Pause music';
+      musicToggle.setAttribute('aria-pressed', 'true');
+
+      showToast('A little melody, just for you ♡');
+    } else {
+      backgroundMusic.pause();
+
+      musicToggle.textContent = '♫ Play music';
+      musicToggle.setAttribute('aria-pressed', 'false');
+
+      showToast('Music paused ♡');
+    }
+  } catch (error) {
+    showToast('Could not start music. Please check your music file.');
+  }
+});
+
+backgroundMusic.addEventListener('ended', () => {
+  musicToggle.textContent = '♫ Play music';
+  musicToggle.setAttribute('aria-pressed', 'false');
+});
+
+
+  </script>
+</body>
+</html>
